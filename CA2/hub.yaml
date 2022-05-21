@@ -1,0 +1,222 @@
+explainerhub:
+  title: ExplainerHub
+  description: 'This ExplainerHub shows a number of ExplainerDashboards.
+
+    Each dashboard makes the inner workings and predictions of a trained machine learning
+    model transparent and explainable.'
+  masonry: false
+  n_dashboard_cols: 3
+  users_file: users.yaml
+  user_json: null
+  db_users: null
+  dbs_open_by_default: false
+  port: 8050
+  min_height: 3000
+  no_index: false
+  bootstrap: null
+  fluid: true
+  base_route: dashboards
+  index_to_base_route: false
+  max_dashboards: null
+  add_dashboard_route: false
+  add_dashboard_pattern: null
+  kwargs: {}
+  dashboards:
+  - dashboard:
+      explainerfile: dashboard1_explainer.joblib
+      params:
+        title: DecisionTreeRegression Results (Ireland)
+        name: dashboard1
+        description: Milk Consumption Prediction_Ireland
+        simple: false
+        hide_header: false
+        header_hide_title: false
+        header_hide_selector: false
+        header_hide_download: false
+        hide_poweredby: false
+        block_selector_callbacks: false
+        pos_label: null
+        fluid: true
+        mode: dash
+        width: 1000
+        height: 800
+        bootstrap: null
+        external_stylesheets: null
+        url_base_pathname: /dashboards/dashboard1/
+        responsive: true
+        logins: null
+        port: 8050
+        importances: true
+        model_summary: true
+        contributions: true
+        whatif: true
+        shap_dependence: true
+        shap_interaction: true
+        decision_trees: true
+        kwargs: {}
+        tabs: null
+  - dashboard:
+      explainerfile: dashboard2_explainer.joblib
+      params:
+        title: RandomForestRegression Results (Ireland)
+        name: dashboard2
+        description: Milk Consumption Prediction_Ireland
+        simple: false
+        hide_header: false
+        header_hide_title: false
+        header_hide_selector: false
+        header_hide_download: false
+        hide_poweredby: false
+        block_selector_callbacks: false
+        pos_label: null
+        fluid: true
+        mode: dash
+        width: 1000
+        height: 800
+        bootstrap: null
+        external_stylesheets: null
+        url_base_pathname: /dashboards/dashboard2/
+        responsive: true
+        logins: null
+        port: 8050
+        importances: true
+        model_summary: true
+        contributions: true
+        whatif: true
+        shap_dependence: true
+        shap_interaction: true
+        decision_trees: true
+        kwargs: {}
+        tabs: null
+  - dashboard:
+      explainerfile: dashboard3_explainer.joblib
+      params:
+        title: DecisionTreeRegression Results (Germany)
+        name: dashboard3
+        description: Milk Consumption Prediction_Germany
+        simple: false
+        hide_header: false
+        header_hide_title: false
+        header_hide_selector: false
+        header_hide_download: false
+        hide_poweredby: false
+        block_selector_callbacks: false
+        pos_label: null
+        fluid: true
+        mode: dash
+        width: 1000
+        height: 800
+        bootstrap: null
+        external_stylesheets: null
+        url_base_pathname: /dashboards/dashboard3/
+        responsive: true
+        logins: null
+        port: 8050
+        importances: true
+        model_summary: true
+        contributions: true
+        whatif: true
+        shap_dependence: true
+        shap_interaction: true
+        decision_trees: true
+        kwargs: {}
+        tabs: null
+  - dashboard:
+      explainerfile: dashboard4_explainer.joblib
+      params:
+        title: RandomForestRegression Results (Germany)
+        name: dashboard4
+        description: Milk Consumption Prediction_Germany
+        simple: false
+        hide_header: false
+        header_hide_title: false
+        header_hide_selector: false
+        header_hide_download: false
+        hide_poweredby: false
+        block_selector_callbacks: false
+        pos_label: null
+        fluid: true
+        mode: dash
+        width: 1000
+        height: 800
+        bootstrap: null
+        external_stylesheets: null
+        url_base_pathname: /dashboards/dashboard4/
+        responsive: true
+        logins: null
+        port: 8050
+        importances: true
+        model_summary: true
+        contributions: true
+        whatif: true
+        shap_dependence: true
+        shap_interaction: true
+        decision_trees: true
+        kwargs: {}
+        tabs: null
+  - dashboard:
+      explainerfile: dashboard5_explainer.joblib
+      params:
+        title: DecisionTreeRegression Results (Australia)
+        name: dashboard5
+        description: 'Milk Consumption Prediction_Australia '
+        simple: false
+        hide_header: false
+        header_hide_title: false
+        header_hide_selector: false
+        header_hide_download: false
+        hide_poweredby: false
+        block_selector_callbacks: false
+        pos_label: null
+        fluid: true
+        mode: dash
+        width: 1000
+        height: 800
+        bootstrap: null
+        external_stylesheets: null
+        url_base_pathname: /dashboards/dashboard5/
+        responsive: true
+        logins: null
+        port: 8050
+        importances: true
+        model_summary: true
+        contributions: true
+        whatif: true
+        shap_dependence: true
+        shap_interaction: true
+        decision_trees: true
+        kwargs: {}
+        tabs: null
+  - dashboard:
+      explainerfile: dashboard6_explainer.joblib
+      params:
+        title: RandomForestRegression Results (Australia)
+        name: dashboard6
+        description: 'Milk Consumption Prediction_Australia '
+        simple: false
+        hide_header: false
+        header_hide_title: false
+        header_hide_selector: false
+        header_hide_download: false
+        hide_poweredby: false
+        block_selector_callbacks: false
+        pos_label: null
+        fluid: true
+        mode: dash
+        width: 1000
+        height: 800
+        bootstrap: null
+        external_stylesheets: null
+        url_base_pathname: /dashboards/dashboard6/
+        responsive: true
+        logins: null
+        port: 8050
+        importances: true
+        model_summary: true
+        contributions: true
+        whatif: true
+        shap_dependence: true
+        shap_interaction: true
+        decision_trees: true
+        kwargs: {}
+        tabs: null
