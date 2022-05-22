@@ -1,0 +1,986 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>explainerdashboard</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</head>
+<body>
+
+<div class="container">
+<div><H1>DecisionTreeRegression Results (Germany)</H1></div><ul class="nav nav-tabs" id="myTab" role="tablist">
+    <li class="nav-item">
+        <a class="nav-link active" id="Feature Importances-tab" data-toggle="tab" href="#Feature Importances" role="tab" aria-controls="Feature Importances" aria-selected="true">Feature Importances</a>
+    </li>
+
+    <li class="nav-item">
+        <a class="nav-link" id="Regression Stats-tab" data-toggle="tab" href="#Regression Stats" role="tab" aria-controls="Regression Stats" aria-selected="false">Regression Stats</a>
+    </li>
+
+    <li class="nav-item">
+        <a class="nav-link" id="Individual Predictions-tab" data-toggle="tab" href="#Individual Predictions" role="tab" aria-controls="Individual Predictions" aria-selected="false">Individual Predictions</a>
+    </li>
+
+    <li class="nav-item">
+        <a class="nav-link" id="What if...-tab" data-toggle="tab" href="#What if..." role="tab" aria-controls="What if..." aria-selected="false">What if...</a>
+    </li>
+
+    <li class="nav-item">
+        <a class="nav-link" id="Feature Dependence-tab" data-toggle="tab" href="#Feature Dependence" role="tab" aria-controls="Feature Dependence" aria-selected="false">Feature Dependence</a>
+    </li>
+
+    <li class="nav-item">
+        <a class="nav-link" id="Feature Interactions-tab" data-toggle="tab" href="#Feature Interactions" role="tab" aria-controls="Feature Interactions" aria-selected="false">Feature Interactions</a>
+    </li>
+
+</ul>
+
+<div class="tab-content">
+
+<div class="tab-pane active" id="Feature Importances" role="tabpanel" aria-labelledby="Feature Importances-tab">
+ <div><H1>Feature Importances</H1></div>
+<div class="row" style="margin-top: 20px;">
+    
+<div class="col-sm">
+
+<div class="card-deck">
+    
+<div class="card" >
+  <div class="card-header"><h3 class="card-title">Feature Importances</h3></div>
+  <div class="card-body">
+    <div class="w-100">
+    
+<div class="row" style="margin-top: 20px;">
+    
+<div class="col-sm">
+<div>                        <script type="text/javascript">window.PlotlyConfig = {MathJaxConfig: 'local'};</script>
+        <script src="https://cdn.plot.ly/plotly-2.11.1.min.js"></script>                <div id="f1f4996b-5d49-45a5-a7b6-b181c6ce0fd2" class="plotly-graph-div" style="height:460px; width:100%;"></div>            <script type="text/javascript">                                    window.PLOTLYENV=window.PLOTLYENV || {};                                    if (document.getElementById("f1f4996b-5d49-45a5-a7b6-b181c6ce0fd2")) {                    Plotly.newPlot(                        "f1f4996b-5d49-45a5-a7b6-b181c6ce0fd2",                        [{"hoverinfo":"text","orientation":"h","text":["Hazelnuts shelled consumption in tonnes","Whole cow milk imports in tonnes","Butter consumption in tonnes","Cashews shelled consumption in tonnes","Almonds shelled consumption in tonnes","Cheese consumption in tonnes","Oats, rolled consumption in tonnes","","Skimmed cow milk cosumption in tonnes","Whole cow milk exports in tonnes","Whole cow milk production in tonnes","Quinoa consumption in tonnes","Soy consumption in tonnes"],"x":[0.0,595.2581063367967,3525.9290114544365,4803.164924792491,6602.8846919211755,13789.289568059192,18658.731545781946,38003.39392792616,73395.89356123935,126064.71627256773,167423.51268276182,294350.9016512498,881494.1292524968],"y":["13. hazelnut_consumption","12. milk_imports","11. butter_consumption","10. cashew_consumption","9. almond_consumption","8. cheese_consumption","7. oat_consumption","6. Population_Ireland","5. skimmed_consumption","4. milk_exports","3. milk_production","2. quinoa_consumption","1. soy_consumption"],"type":"bar"}],                        {"plot_bgcolor":"#fff","showlegend":false,"title":{"text":"Average impact on predicted milk_consumption<br>(mean absolute SHAP value)"},"template":{"data":{"scatter":[{"type":"scatter"}]}},"yaxis":{"automargin":true},"xaxis":{"automargin":true,"title":{"text":"Tonnes"}},"height":460,"margin":{"b":40,"l":140,"pad":4,"r":40,"t":40}},                        {"responsive": true}                    )                };                            </script>        </div>
+</div>
+        
+</div> 
+    
+    </div>
+  </div>
+</div>
+
+</div>
+    
+</div>
+        
+</div> 
+    
+<div class="row" style="margin-top: 20px;">
+    
+<div class="col-sm">
+
+<div class="card-deck">
+    
+<div class="card" >
+  <div class="card-header"><h3 class="card-title">Feature Descriptions</h3></div>
+  <div class="card-body">
+    <div class="w-100">
+    
+<div class="row" style="margin-top: 20px;">
+    
+<div class="col-sm">
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Feature</th>
+      <th scope="col">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Population_Ireland</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>almond_consumption</td>
+      <td>Almonds shelled consumption in tonnes</td>
+    </tr>
+    <tr>
+      <td>butter_consumption</td>
+      <td>Butter consumption in tonnes</td>
+    </tr>
+    <tr>
+      <td>cashew_consumption</td>
+      <td>Cashews shelled consumption in tonnes</td>
+    </tr>
+    <tr>
+      <td>cheese_consumption</td>
+      <td>Cheese consumption in tonnes</td>
+    </tr>
+    <tr>
+      <td>hazelnut_consumption</td>
+      <td>Hazelnuts shelled consumption in tonnes</td>
+    </tr>
+    <tr>
+      <td>milk_exports</td>
+      <td>Whole cow milk exports in tonnes</td>
+    </tr>
+    <tr>
+      <td>milk_imports</td>
+      <td>Whole cow milk imports in tonnes</td>
+    </tr>
+    <tr>
+      <td>milk_production</td>
+      <td>Whole cow milk production in tonnes</td>
+    </tr>
+    <tr>
+      <td>oat_consumption</td>
+      <td>Oats, rolled consumption in tonnes</td>
+    </tr>
+    <tr>
+      <td>quinoa_consumption</td>
+      <td>Quinoa consumption in tonnes</td>
+    </tr>
+    <tr>
+      <td>skimmed_consumption</td>
+      <td>Skimmed cow milk cosumption in tonnes</td>
+    </tr>
+    <tr>
+      <td>soy_consumption</td>
+      <td>Soy consumption in tonnes</td>
+    </tr>
+
+  </tbody>
+</table>
+    
+</div>
+        
+</div> 
+    
+    </div>
+  </div>
+</div>
+
+</div>
+    
+</div>
+        
+</div> 
+     
+</div>
+<div class="tab-pane" id="Regression Stats" role="tabpanel" aria-labelledby="Regression Stats-tab">
+ <div></div>
+<div class="row" style="margin-top: 20px;">
+    
+<div class="col-sm">
+
+<div class="card-deck">
+    
+<div class="card" >
+  <div class="card-header"><h3 class="card-title">Model Summary</h3></div>
+  <div class="card-body">
+    <div class="w-100">
+    
+<div class="row" style="margin-top: 20px;">
+    
+<div class="col-sm">
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">metric</th>
+      <th scope="col">Score</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>mean-squared-error</td>
+      <td>568538671420.0</td>
+    </tr>
+    <tr>
+      <td>root-mean-squared-error</td>
+      <td>754015.034</td>
+    </tr>
+    <tr>
+      <td>mean-absolute-error</td>
+      <td>398105.222</td>
+    </tr>
+    <tr>
+      <td>mean-absolute-percentage-error</td>
+      <td>0.121</td>
+    </tr>
+    <tr>
+      <td>R-squared</td>
+      <td>0.782</td>
+    </tr>
+
+  </tbody>
+</table>
+    
+</div>
+        
+</div> 
+    
+    </div>
+  </div>
+</div>
+
+<div class="card" >
+  <div class="card-header"><h3 class="card-title">Predicted vs Actual</h3></div>
+  <div class="card-body">
+    <div class="w-100">
+    
+<div class="row" style="margin-top: 20px;">
+    
+<div class="col-sm">
+<div>                        <script type="text/javascript">window.PlotlyConfig = {MathJaxConfig: 'local'};</script>
+        <script src="https://cdn.plot.ly/plotly-2.11.1.min.js"></script>                <div id="f56290ae-4852-4086-bc21-808c9e5b657b" class="plotly-graph-div" style="height:100%; width:100%;"></div>            <script type="text/javascript">                                    window.PLOTLYENV=window.PLOTLYENV || {};                                    if (document.getElementById("f56290ae-4852-4086-bc21-808c9e5b657b")) {                    Plotly.newPlot(                        "f56290ae-4852-4086-bc21-808c9e5b657b",                        [{"hoverinfo":"text","mode":"markers","name":"predicted milk_consumption (Tonnes)","text":["Index: 0<br>Observed: 2355719.000<br>Prediction: 2450779.000","Index: 5<br>Observed: 2714052.000<br>Prediction: 2461079.000","Index: 34<br>Observed: 5403761.000<br>Prediction: 5321891.000","Index: 13<br>Observed: 3340555.000<br>Prediction: 3075268.000","Index: 45<br>Observed: 5373356.000<br>Prediction: 5324485.000","Index: 53<br>Observed: 6271617.000<br>Prediction: 5711799.000","Index: 57<br>Observed: 8556840.000<br>Prediction: 8137615.000","Index: 25<br>Observed: 5594656.000<br>Prediction: 5711799.000","Index: 47<br>Observed: 5189937.000<br>Prediction: 5198836.000","Index: 12<br>Observed: 3475500.000<br>Prediction: 3587035.000","Index: 49<br>Observed: 5437572.000<br>Prediction: 5272697.000","Index: 3<br>Observed: 2544888.000<br>Prediction: 2461079.000","Index: 36<br>Observed: 5346671.000<br>Prediction: 5324485.000","Index: 31<br>Observed: 5349395.000<br>Prediction: 5323912.000","Index: 8<br>Observed: 3144780.000<br>Prediction: 4707897.000","Index: 17<br>Observed: 4692787.000<br>Prediction: 4156093.000","Index: 6<br>Observed: 2950377.000<br>Prediction: 3160392.000","Index: 4<br>Observed: 2625837.000<br>Prediction: 5224871.000"],"x":[2355719.0,2714052.0,5403761.0,3340555.0,5373356.0,6271617.0,8556840.0,5594656.0,5189937.0,3475500.0,5437572.0,2544888.0,5346671.0,5349395.0,3144780.0,4692787.0,2950377.0,2625837.0],"y":[2450779.0,2461079.0,5321891.0,3075268.0,5324485.0,5711799.0,8137615.0,5711799.0,5198836.0,3587035.0,5272697.0,2461079.0,5324485.0,5323912.0,4707897.0,4156093.0,3160392.0,5224871.0],"type":"scattergl"},{"hoverinfo":"none","mode":"lines","name":"observed milk_consumption (Tonnes)","x":[2355719.0,2544888.0,2625837.0,2714052.0,2950377.0,3144780.0,3340555.0,3475500.0,4692787.0,5189937.0,5346671.0,5349395.0,5373356.0,5403761.0,5437572.0,5594656.0,6271617.0,8556840.0],"y":[2355719.0,2544888.0,2625837.0,2714052.0,2950377.0,3144780.0,3340555.0,3475500.0,4692787.0,5189937.0,5346671.0,5349395.0,5373356.0,5403761.0,5437572.0,5594656.0,6271617.0,8556840.0],"type":"scattergl"}],                        {"hovermode":"closest","plot_bgcolor":"#fff","title":{"text":"Predicted milk_consumption vs Observed milk_consumption"},"xaxis":{"title":{"text":"Observed milk_consumption (Tonnes)"}},"yaxis":{"title":{"text":"Predicted milk_consumption (Tonnes)"}},"template":{"data":{"scatter":[{"type":"scatter"}]}},"margin":{"t":40,"b":40,"l":40,"r":40}},                        {"responsive": true}                    )                };                            </script>        </div>
+</div>
+        
+</div> 
+    
+    </div>
+  </div>
+</div>
+
+</div>
+    
+</div>
+        
+</div> 
+    
+<div class="row" style="margin-top: 20px;">
+    
+<div class="col-sm">
+
+<div class="card-deck">
+    
+<div class="card" >
+  <div class="card-header"><h3 class="card-title">Residuals</h3></div>
+  <div class="card-body">
+    <div class="w-100">
+    
+<div class="row" style="margin-top: 20px;">
+    
+<div class="col-sm">
+<div>                        <script type="text/javascript">window.PlotlyConfig = {MathJaxConfig: 'local'};</script>
+        <script src="https://cdn.plot.ly/plotly-2.11.1.min.js"></script>                <div id="bca4a5cd-3579-439b-8871-9dfd98ebfaf6" class="plotly-graph-div" style="height:100%; width:100%;"></div>            <script type="text/javascript">                                    window.PLOTLYENV=window.PLOTLYENV || {};                                    if (document.getElementById("bca4a5cd-3579-439b-8871-9dfd98ebfaf6")) {                    Plotly.newPlot(                        "bca4a5cd-3579-439b-8871-9dfd98ebfaf6",                        [{"hoverinfo":"text","mode":"markers","name":"residuals (y-preds)","text":["Index: 0<br>Observed: 2355719.000<br>Prediction: 2450779.000<br>Residual: -95060.000","Index: 5<br>Observed: 2714052.000<br>Prediction: 2461079.000<br>Residual: 252973.000","Index: 34<br>Observed: 5403761.000<br>Prediction: 5321891.000<br>Residual: 81870.000","Index: 13<br>Observed: 3340555.000<br>Prediction: 3075268.000<br>Residual: 265287.000","Index: 45<br>Observed: 5373356.000<br>Prediction: 5324485.000<br>Residual: 48871.000","Index: 53<br>Observed: 6271617.000<br>Prediction: 5711799.000<br>Residual: 559818.000","Index: 57<br>Observed: 8556840.000<br>Prediction: 8137615.000<br>Residual: 419225.000","Index: 25<br>Observed: 5594656.000<br>Prediction: 5711799.000<br>Residual: -117143.000","Index: 47<br>Observed: 5189937.000<br>Prediction: 5198836.000<br>Residual: -8899.000","Index: 12<br>Observed: 3475500.000<br>Prediction: 3587035.000<br>Residual: -111535.000","Index: 49<br>Observed: 5437572.000<br>Prediction: 5272697.000<br>Residual: 164875.000","Index: 3<br>Observed: 2544888.000<br>Prediction: 2461079.000<br>Residual: 83809.000","Index: 36<br>Observed: 5346671.000<br>Prediction: 5324485.000<br>Residual: 22186.000","Index: 31<br>Observed: 5349395.000<br>Prediction: 5323912.000<br>Residual: 25483.000","Index: 8<br>Observed: 3144780.000<br>Prediction: 4707897.000<br>Residual: -1563117.000","Index: 17<br>Observed: 4692787.000<br>Prediction: 4156093.000<br>Residual: 536694.000","Index: 6<br>Observed: 2950377.000<br>Prediction: 3160392.000<br>Residual: -210015.000","Index: 4<br>Observed: 2625837.000<br>Prediction: 5224871.000<br>Residual: -2599034.000"],"x":[2450779.0,2461079.0,5321891.0,3075268.0,5324485.0,5711799.0,8137615.0,5711799.0,5198836.0,3587035.0,5272697.0,2461079.0,5324485.0,5323912.0,4707897.0,4156093.0,3160392.0,5224871.0],"y":[-95060.0,252973.0,81870.0,265287.0,48871.0,559818.0,419225.0,-117143.0,-8899.0,-111535.0,164875.0,83809.0,22186.0,25483.0,-1563117.0,536694.0,-210015.0,-2599034.0],"type":"scattergl"},{"hoverinfo":"none","mode":"lines","name":"Predicted milk_consumption (Tonnes)","x":[2450779.0,2461079.0,5321891.0,3075268.0,5324485.0,5711799.0,8137615.0,5711799.0,5198836.0,3587035.0,5272697.0,2461079.0,5324485.0,5323912.0,4707897.0,4156093.0,3160392.0,5224871.0],"y":[0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0],"type":"scattergl"}],                        {"hovermode":"closest","plot_bgcolor":"#fff","title":{"text":"Residuals vs predicted milk_consumption"},"xaxis":{"title":{"text":"Predicted milk_consumption (Tonnes)"}},"yaxis":{"title":{"text":"residuals (y-preds)"}},"template":{"data":{"scatter":[{"type":"scatter"}]}},"margin":{"t":40,"b":40,"l":40,"r":40}},                        {"responsive": true}                    )                };                            </script>        </div>
+</div>
+        
+</div> 
+    
+    </div>
+  </div>
+</div>
+
+<div class="card" >
+  <div class="card-header"><h3 class="card-title">Plot vs feature</h3><h6 class="card-subtitle">Are predictions and residuals correlated with features?</h6></div>
+  <div class="card-body">
+    <div class="w-100">
+    
+<div class="row" style="margin-top: 20px;">
+    
+<div class="col-sm">
+<div>                        <script type="text/javascript">window.PlotlyConfig = {MathJaxConfig: 'local'};</script>
+        <script src="https://cdn.plot.ly/plotly-2.11.1.min.js"></script>                <div id="a8db5b11-b3cb-497d-a808-0899a9acfb6d" class="plotly-graph-div" style="height:100%; width:100%;"></div>            <script type="text/javascript">                                    window.PLOTLYENV=window.PLOTLYENV || {};                                    if (document.getElementById("a8db5b11-b3cb-497d-a808-0899a9acfb6d")) {                    Plotly.newPlot(                        "a8db5b11-b3cb-497d-a808-0899a9acfb6d",                        [{"hoverinfo":"text","mode":"markers","name":"residuals (y-preds)","text":["Index: 0<br>Actual: 2355719.000<br>Prediction: 2450779.000<br>Residual: -95060.000","Index: 5<br>Actual: 2714052.000<br>Prediction: 2461079.000<br>Residual: 252973.000","Index: 34<br>Actual: 5403761.000<br>Prediction: 5321891.000<br>Residual: 81870.000","Index: 13<br>Actual: 3340555.000<br>Prediction: 3075268.000<br>Residual: 265287.000","Index: 45<br>Actual: 5373356.000<br>Prediction: 5324485.000<br>Residual: 48871.000","Index: 53<br>Actual: 6271617.000<br>Prediction: 5711799.000<br>Residual: 559818.000","Index: 57<br>Actual: 8556840.000<br>Prediction: 8137615.000<br>Residual: 419225.000","Index: 25<br>Actual: 5594656.000<br>Prediction: 5711799.000<br>Residual: -117143.000","Index: 47<br>Actual: 5189937.000<br>Prediction: 5198836.000<br>Residual: -8899.000","Index: 12<br>Actual: 3475500.000<br>Prediction: 3587035.000<br>Residual: -111535.000","Index: 49<br>Actual: 5437572.000<br>Prediction: 5272697.000<br>Residual: 164875.000","Index: 3<br>Actual: 2544888.000<br>Prediction: 2461079.000<br>Residual: 83809.000","Index: 36<br>Actual: 5346671.000<br>Prediction: 5324485.000<br>Residual: 22186.000","Index: 31<br>Actual: 5349395.000<br>Prediction: 5323912.000<br>Residual: 25483.000","Index: 8<br>Actual: 3144780.000<br>Prediction: 4707897.000<br>Residual: -1563117.000","Index: 17<br>Actual: 4692787.000<br>Prediction: 4156093.000<br>Residual: 536694.000","Index: 6<br>Actual: 2950377.000<br>Prediction: 3160392.000<br>Residual: -210015.000","Index: 4<br>Actual: 2625837.000<br>Prediction: 5224871.000<br>Residual: -2599034.000"],"x":[0.0,0.0,15909.0,357.0,51741.0,11994.0,29902.0,6212.0,30030.0,454.0,24616.0,0.0,38550.0,21364.0,1108.0,12.0,2.0,1160.0],"y":[-95060.0,252973.0,81870.0,265287.0,48871.0,559818.0,419225.0,-117143.0,-8899.0,-111535.0,164875.0,83809.0,22186.0,25483.0,-1563117.0,536694.0,-210015.0,-2599034.0],"type":"scattergl"},{"hoverinfo":"none","mode":"lines","name":"soy_consumption","x":[0.0,0.0,15909.0,357.0,51741.0,11994.0,29902.0,6212.0,30030.0,454.0,24616.0,0.0,38550.0,21364.0,1108.0,12.0,2.0,1160.0],"y":[0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0],"type":"scattergl"}],                        {"hovermode":"closest","plot_bgcolor":"#fff","title":{"text":"Residuals vs soy_consumption"},"xaxis":{"title":{"text":"soy_consumption value"}},"yaxis":{"title":{"text":"residuals (y-preds)"},"range":[-2599034.0,559818.0]},"template":{"data":{"scatter":[{"type":"scatter"}]}},"margin":{"t":40,"b":40,"l":40,"r":40}},                        {"responsive": true}                    )                };                            </script>        </div>
+</div>
+        
+</div> 
+    
+    </div>
+  </div>
+</div>
+
+</div>
+    
+</div>
+        
+</div> 
+     
+</div>
+<div class="tab-pane" id="Individual Predictions" role="tabpanel" aria-labelledby="Individual Predictions-tab">
+ <div><H1>Individual Predictions</H1></div>
+<div class="row" style="margin-top: 20px;">
+    
+<div class="col-sm">
+
+<div class="card-deck">
+    
+<div class="card" >
+  <div class="card-header"><h3 class="card-title">Select Index</h3></div>
+  <div class="card-body">
+    <div class="w-100">
+    
+<div class="row" style="margin-top: 20px;">
+    
+<div class="col-sm">
+Selected index: <b>17</b>
+</div>
+        
+</div> 
+    
+    </div>
+  </div>
+</div>
+
+<div class="card" >
+  <div class="card-header"><h3 class="card-title">Prediction</h3></div>
+  <div class="card-body">
+    <div class="w-100">
+    
+<div class="row" style="margin-top: 20px;">
+    
+<div class="col-sm">
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col"></th>
+      <th scope="col">milk_consumption</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Predicted</td>
+      <td>4156093.000 Tonnes</td>
+    </tr>
+    <tr>
+      <td>Observed</td>
+      <td>4692787.000 Tonnes</td>
+    </tr>
+    <tr>
+      <td>Residual</td>
+      <td>536694.000 Tonnes</td>
+    </tr>
+
+  </tbody>
+</table>
+    
+</div>
+        
+</div> 
+    
+    </div>
+  </div>
+</div>
+
+</div>
+    
+</div>
+        
+</div> 
+    
+<div class="row" style="margin-top: 20px;">
+    
+<div class="col-sm">
+
+<div class="card-deck">
+    
+<div class="card" >
+  <div class="card-header"><h3 class="card-title">Contributions Plot</h3><h6 class="card-subtitle">How has each feature contributed to the prediction?</h6></div>
+  <div class="card-body">
+    <div class="w-100">
+    
+<div class="row" style="margin-top: 20px;">
+    
+<div class="col-sm">
+<div>                        <script type="text/javascript">window.PlotlyConfig = {MathJaxConfig: 'local'};</script>
+        <script src="https://cdn.plot.ly/plotly-2.11.1.min.js"></script>                <div id="fffe3f1f-42f5-4e35-bcbd-771e415db6a4" class="plotly-graph-div" style="height:600px; width:100%;"></div>            <script type="text/javascript">                                    window.PLOTLYENV=window.PLOTLYENV || {};                                    if (document.getElementById("fffe3f1f-42f5-4e35-bcbd-771e415db6a4")) {                    Plotly.newPlot(                        "fffe3f1f-42f5-4e35-bcbd-771e415db6a4",                        [{"hoverinfo":"skip","marker":{"color":"rgba(1,1,1, 0.0)"},"name":"","x":["Population<br>average","milk_production","skimmed_consumption","butter_consumption","milk_imports","hazelnut_consumption","Other features combined","cashew_consumption","almond_consumption","oat_consumption","Population_Ireland","cheese_consumption","quinoa_consumption","milk_exports","soy_consumption","Final Prediction"],"y":[0.0,5130367.02,5593523.75,5630197.36,5632584.06,5632834.56,5632834.56,5632834.56,5631048.41,5628954.67,5622622.65,5603548.43,5584061.42,5460084.93,5276546.68,0.0],"type":"bar"},{"hoverinfo":"text","marker":{"color":["rgba(230, 230, 30, 1.0)","rgba(50, 200, 50, 1.0)","rgba(50, 200, 50, 1.0)","rgba(50, 200, 50, 1.0)","rgba(50, 200, 50, 1.0)","rgba(219, 64, 82, 0.7)","rgba(219, 64, 82, 0.7)","rgba(219, 64, 82, 0.7)","rgba(219, 64, 82, 0.7)","rgba(219, 64, 82, 0.7)","rgba(219, 64, 82, 0.7)","rgba(219, 64, 82, 0.7)","rgba(219, 64, 82, 0.7)","rgba(219, 64, 82, 0.7)","rgba(219, 64, 82, 0.7)","rgba(55, 128, 191, 0.7)"],"line":{"color":["rgba(190, 190, 30, 1.0)","rgba(40, 160, 50, 1.0)","rgba(40, 160, 50, 1.0)","rgba(40, 160, 50, 1.0)","rgba(40, 160, 50, 1.0)","rgba(219, 64, 82, 1.0)","rgba(219, 64, 82, 1.0)","rgba(219, 64, 82, 1.0)","rgba(219, 64, 82, 1.0)","rgba(219, 64, 82, 1.0)","rgba(219, 64, 82, 1.0)","rgba(219, 64, 82, 1.0)","rgba(219, 64, 82, 1.0)","rgba(219, 64, 82, 1.0)","rgba(219, 64, 82, 1.0)","rgba(55, 128, 191, 1.0)"],"width":2}},"name":"contribution","text":["Population<br>average=<BR>+5130367.02 Tonnes","milk_production=4697000.0<BR>+463156.73 Tonnes","skimmed_consumption=2739377.0<BR>+36673.61 Tonnes","butter_consumption=49865.0<BR>+2386.7 Tonnes","milk_imports=64.0<BR>+250.5 Tonnes","hazelnut_consumption=196.0<BR>0.0 Tonnes","Other features combined=<BR>0.0 Tonnes","cashew_consumption=12.0<BR>-1786.15 Tonnes","almond_consumption=329.0<BR>-2093.74 Tonnes","oat_consumption=438.0<BR>-6332.02 Tonnes","Population_Ireland=3329100.0<BR>-19074.22 Tonnes","cheese_consumption=9709.0<BR>-19487.01 Tonnes","quinoa_consumption=0.0<BR>-123976.49 Tonnes","milk_exports=4277.0<BR>-183538.25 Tonnes","soy_consumption=12.0<BR>-1120453.68 Tonnes","Final Prediction=<BR>+4156093.0 Tonnes"],"x":["Population<br>average","milk_production","skimmed_consumption","butter_consumption","milk_imports","hazelnut_consumption","Other features combined","cashew_consumption","almond_consumption","oat_consumption","Population_Ireland","cheese_consumption","quinoa_consumption","milk_exports","soy_consumption","Final Prediction"],"y":[5130367.02,463156.73,36673.61,2386.7,250.5,0.0,0.0,-1786.15,-2093.74,-6332.02,-19074.22,-19487.01,-123976.49,-183538.25,-1120453.68,4156093.0],"type":"bar"}],                        {"barmode":"stack","height":600,"plot_bgcolor":"#fff","showlegend":false,"title":{"text":"Contribution to prediction milk_consumption = 4156093.0 Tonnes","x":0.5},"template":{"data":{"scatter":[{"type":"scatter"}]}},"margin":{"b":138,"l":40,"pad":4,"r":40,"t":40},"yaxis":{"title":{"text":"Predicted Tonnes"}}},                        {"responsive": true}                    )                };                            </script>        </div>
+</div>
+        
+</div> 
+    
+    </div>
+  </div>
+</div>
+
+<div class="card" >
+  <div class="card-header"><h3 class="card-title">Partial Dependence Plot</h3></div>
+  <div class="card-body">
+    <div class="w-100">
+    
+<div class="row" style="margin-top: 20px;">
+    
+<div class="col-sm">
+<div>                        <script type="text/javascript">window.PlotlyConfig = {MathJaxConfig: 'local'};</script>
+        <script src="https://cdn.plot.ly/plotly-2.11.1.min.js"></script>                <div id="42b6746b-67ba-4a85-b650-2e348b38c46c" class="plotly-graph-div" style="height:100%; width:100%;"></div>            <script type="text/javascript">                                    window.PLOTLYENV=window.PLOTLYENV || {};                                    if (document.getElementById("42b6746b-67ba-4a85-b650-2e348b38c46c")) {                    Plotly.newPlot(                        "42b6746b-67ba-4a85-b650-2e348b38c46c",                        [{"line":{"color":"grey","width":4},"mode":"lines+markers","name":"average prediction <br>for different values of <br>soy_consumption","x":[0.0,9.777777777777777,12.0,421.6666666666665,1136.888888888889,8781.77777777778,17727.333333333318,25790.666666666664,30976.666666666664,51741.0],"y":[3576557.39,3576557.39,3576557.39,3576557.39,5210443.5,5210443.5,5210443.5,5210443.5,5210443.5,5210443.5],"type":"scatter"},{"line":{"color":"blue","width":4},"mode":"lines+markers","name":"prediction for index 0 <br>for different values of <br>soy_consumption","x":[0.0,9.777777777777777,12.0,421.6666666666665,1136.888888888889,8781.77777777778,17727.333333333318,25790.666666666664,30976.666666666664,51741.0],"y":[4156093.0,4156093.0,4156093.0,4156093.0,4674420.0,4674420.0,4674420.0,4674420.0,4674420.0,4674420.0],"type":"scatter"},{"hoverinfo":"skip","line":{"color":"grey"},"mode":"lines","opacity":0.1,"showlegend":false,"x":[0.0,9.777777777777777,12.0,421.6666666666665,1136.888888888889,8781.77777777778,17727.333333333318,25790.666666666664,30976.666666666664,51741.0],"y":[4156093.0,4156093.0,4156093.0,4156093.0,5711799.0,5711799.0,5711799.0,5711799.0,5711799.0,5711799.0],"type":"scatter"},{"hoverinfo":"skip","line":{"color":"grey"},"mode":"lines","opacity":0.1,"showlegend":false,"x":[0.0,9.777777777777777,12.0,421.6666666666665,1136.888888888889,8781.77777777778,17727.333333333318,25790.666666666664,30976.666666666664,51741.0],"y":[4156093.0,4156093.0,4156093.0,4156093.0,5711799.0,5711799.0,5711799.0,5711799.0,5711799.0,5711799.0],"type":"scatter"},{"hoverinfo":"skip","line":{"color":"grey"},"mode":"lines","opacity":0.1,"showlegend":false,"x":[0.0,9.777777777777777,12.0,421.6666666666665,1136.888888888889,8781.77777777778,17727.333333333318,25790.666666666664,30976.666666666664,51741.0],"y":[4156093.0,4156093.0,4156093.0,4156093.0,5324485.0,5324485.0,5324485.0,5324485.0,5324485.0,5324485.0],"type":"scatter"},{"hoverinfo":"skip","line":{"color":"grey"},"mode":"lines","opacity":0.1,"showlegend":false,"x":[0.0,9.777777777777777,12.0,421.6666666666665,1136.888888888889,8781.77777777778,17727.333333333318,25790.666666666664,30976.666666666664,51741.0],"y":[3075268.0,3075268.0,3075268.0,3075268.0,4674420.0,4674420.0,4674420.0,4674420.0,4674420.0,4674420.0],"type":"scatter"},{"hoverinfo":"skip","line":{"color":"grey"},"mode":"lines","opacity":0.1,"showlegend":false,"x":[0.0,9.777777777777777,12.0,421.6666666666665,1136.888888888889,8781.77777777778,17727.333333333318,25790.666666666664,30976.666666666664,51741.0],"y":[3587035.0,3587035.0,3587035.0,3587035.0,4780256.0,4780256.0,4780256.0,4780256.0,4780256.0,4780256.0],"type":"scatter"},{"hoverinfo":"skip","line":{"color":"grey"},"mode":"lines","opacity":0.1,"showlegend":false,"x":[0.0,9.777777777777777,12.0,421.6666666666665,1136.888888888889,8781.77777777778,17727.333333333318,25790.666666666664,30976.666666666664,51741.0],"y":[2461079.0,2461079.0,2461079.0,2461079.0,4780256.0,4780256.0,4780256.0,4780256.0,4780256.0,4780256.0],"type":"scatter"},{"hoverinfo":"skip","line":{"color":"grey"},"mode":"lines","opacity":0.1,"showlegend":false,"x":[0.0,9.777777777777777,12.0,421.6666666666665,1136.888888888889,8781.77777777778,17727.333333333318,25790.666666666664,30976.666666666664,51741.0],"y":[4156093.0,4156093.0,4156093.0,4156093.0,8137615.0,8137615.0,8137615.0,8137615.0,8137615.0,8137615.0],"type":"scatter"},{"hoverinfo":"skip","line":{"color":"grey"},"mode":"lines","opacity":0.1,"showlegend":false,"x":[0.0,9.777777777777777,12.0,421.6666666666665,1136.888888888889,8781.77777777778,17727.333333333318,25790.666666666664,30976.666666666664,51741.0],"y":[4156093.0,4156093.0,4156093.0,4156093.0,5198836.0,5198836.0,5198836.0,5198836.0,5198836.0,5198836.0],"type":"scatter"},{"hoverinfo":"skip","line":{"color":"grey"},"mode":"lines","opacity":0.1,"showlegend":false,"x":[0.0,9.777777777777777,12.0,421.6666666666665,1136.888888888889,8781.77777777778,17727.333333333318,25790.666666666664,30976.666666666664,51741.0],"y":[4156093.0,4156093.0,4156093.0,4156093.0,5321891.0,5321891.0,5321891.0,5321891.0,5321891.0,5321891.0],"type":"scatter"},{"hoverinfo":"skip","line":{"color":"grey"},"mode":"lines","opacity":0.1,"showlegend":false,"x":[0.0,9.777777777777777,12.0,421.6666666666665,1136.888888888889,8781.77777777778,17727.333333333318,25790.666666666664,30976.666666666664,51741.0],"y":[2450779.0,2450779.0,2450779.0,2450779.0,4780256.0,4780256.0,4780256.0,4780256.0,4780256.0,4780256.0],"type":"scatter"},{"hoverinfo":"skip","line":{"color":"grey"},"mode":"lines","opacity":0.1,"showlegend":false,"x":[0.0,9.777777777777777,12.0,421.6666666666665,1136.888888888889,8781.77777777778,17727.333333333318,25790.666666666664,30976.666666666664,51741.0],"y":[2461079.0,2461079.0,2461079.0,2461079.0,5224871.0,5224871.0,5224871.0,5224871.0,5224871.0,5224871.0],"type":"scatter"},{"hoverinfo":"skip","line":{"color":"grey"},"mode":"lines","opacity":0.1,"showlegend":false,"x":[0.0,9.777777777777777,12.0,421.6666666666665,1136.888888888889,8781.77777777778,17727.333333333318,25790.666666666664,30976.666666666664,51741.0],"y":[4156093.0,4156093.0,4156093.0,4156093.0,4674420.0,4674420.0,4674420.0,4674420.0,4674420.0,4674420.0],"type":"scatter"},{"hoverinfo":"skip","line":{"color":"grey"},"mode":"lines","opacity":0.1,"showlegend":false,"x":[0.0,9.777777777777777,12.0,421.6666666666665,1136.888888888889,8781.77777777778,17727.333333333318,25790.666666666664,30976.666666666664,51741.0],"y":[3160392.0,3160392.0,3160392.0,3160392.0,4707897.0,4707897.0,4707897.0,4707897.0,4707897.0,4707897.0],"type":"scatter"},{"hoverinfo":"skip","line":{"color":"grey"},"mode":"lines","opacity":0.1,"showlegend":false,"x":[0.0,9.777777777777777,12.0,421.6666666666665,1136.888888888889,8781.77777777778,17727.333333333318,25790.666666666664,30976.666666666664,51741.0],"y":[4156093.0,4156093.0,4156093.0,4156093.0,5323912.0,5323912.0,5323912.0,5323912.0,5323912.0,5323912.0],"type":"scatter"},{"hoverinfo":"skip","line":{"color":"grey"},"mode":"lines","opacity":0.1,"showlegend":false,"x":[0.0,9.777777777777777,12.0,421.6666666666665,1136.888888888889,8781.77777777778,17727.333333333318,25790.666666666664,30976.666666666664,51741.0],"y":[3160392.0,3160392.0,3160392.0,3160392.0,4707897.0,4707897.0,4707897.0,4707897.0,4707897.0,4707897.0],"type":"scatter"},{"hoverinfo":"skip","line":{"color":"grey"},"mode":"lines","opacity":0.1,"showlegend":false,"x":[0.0,9.777777777777777,12.0,421.6666666666665,1136.888888888889,8781.77777777778,17727.333333333318,25790.666666666664,30976.666666666664,51741.0],"y":[4156093.0,4156093.0,4156093.0,4156093.0,5272697.0,5272697.0,5272697.0,5272697.0,5272697.0,5272697.0],"type":"scatter"},{"hoverinfo":"skip","line":{"color":"grey"},"mode":"lines","opacity":0.1,"showlegend":false,"x":[0.0,9.777777777777777,12.0,421.6666666666665,1136.888888888889,8781.77777777778,17727.333333333318,25790.666666666664,30976.666666666664,51741.0],"y":[4156093.0,4156093.0,4156093.0,4156093.0,4674420.0,4674420.0,4674420.0,4674420.0,4674420.0,4674420.0],"type":"scatter"},{"hoverinfo":"skip","line":{"color":"grey"},"mode":"lines","opacity":0.1,"showlegend":false,"x":[0.0,9.777777777777777,12.0,421.6666666666665,1136.888888888889,8781.77777777778,17727.333333333318,25790.666666666664,30976.666666666664,51741.0],"y":[2461079.0,2461079.0,2461079.0,2461079.0,4780256.0,4780256.0,4780256.0,4780256.0,4780256.0,4780256.0],"type":"scatter"}],                        {"plot_bgcolor":"#fff","title":{"text":"pdp plot for soy_consumption"},"xaxis":{"title":{"text":"soy_consumption"}},"yaxis":{"title":{"text":"Predicted milk_consumption (Tonnes)"}},"template":{"data":{"scatter":[{"type":"scatter"}]}},"annotations":[{"text":"baseline value = 12.0","x":12.0,"y":2450779.0},{"text":"baseline pred = 4156093.00","x":8781.77777777778,"y":4156093.0}],"shapes":[{"line":{"color":"MediumPurple","dash":"dot","width":4},"type":"line","x0":12.0,"x1":12.0,"xref":"x","y0":2450779.0,"y1":8137615.0,"yref":"y"},{"line":{"color":"MediumPurple","dash":"dot","width":4},"type":"line","x0":0.0,"x1":51741.0,"xref":"x","y0":4156093.0,"y1":4156093.0,"yref":"y"}],"showlegend":false,"margin":{"t":40,"b":40,"l":40,"r":40}},                        {"responsive": true}                    )                };                            </script>        </div>
+</div>
+        
+</div> 
+    
+    </div>
+  </div>
+</div>
+
+</div>
+    
+</div>
+        
+</div> 
+    
+<div class="row" style="margin-top: 20px;">
+    
+<div class="col-sm">
+
+<div class="card-deck">
+    
+<div class="card" >
+  <div class="card-header"><h3 class="card-title">Contributions Table</h3><h6 class="card-subtitle">How has each feature contributed to the prediction?</h6></div>
+  <div class="card-body">
+    <div class="w-100">
+    
+<div class="row" style="margin-top: 20px;">
+    
+<div class="col-sm">
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Reason</th>
+      <th scope="col">Effect</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Average of population</td>
+      <td>5130367.02 Tonnes</td>
+    </tr>
+    <tr>
+      <td>soy_consumption = 12.0</td>
+      <td>-1120453.68 Tonnes</td>
+    </tr>
+    <tr>
+      <td>milk_production = 4697000.0</td>
+      <td>+463156.73 Tonnes</td>
+    </tr>
+    <tr>
+      <td>milk_exports = 4277.0</td>
+      <td>-183538.25 Tonnes</td>
+    </tr>
+    <tr>
+      <td>quinoa_consumption = 0.0</td>
+      <td>-123976.49 Tonnes</td>
+    </tr>
+    <tr>
+      <td>skimmed_consumption = 2739377.0</td>
+      <td>+36673.61 Tonnes</td>
+    </tr>
+    <tr>
+      <td>cheese_consumption = 9709.0</td>
+      <td>-19487.01 Tonnes</td>
+    </tr>
+    <tr>
+      <td>Population_Ireland = 3329100.0</td>
+      <td>-19074.22 Tonnes</td>
+    </tr>
+    <tr>
+      <td>oat_consumption = 438.0</td>
+      <td>-6332.02 Tonnes</td>
+    </tr>
+    <tr>
+      <td>butter_consumption = 49865.0</td>
+      <td>+2386.7 Tonnes</td>
+    </tr>
+    <tr>
+      <td>almond_consumption = 329.0</td>
+      <td>-2093.74 Tonnes</td>
+    </tr>
+    <tr>
+      <td>cashew_consumption = 12.0</td>
+      <td>-1786.15 Tonnes</td>
+    </tr>
+    <tr>
+      <td>milk_imports = 64.0</td>
+      <td>+250.5 Tonnes</td>
+    </tr>
+    <tr>
+      <td>hazelnut_consumption = 196.0</td>
+      <td>+0.0 Tonnes</td>
+    </tr>
+    <tr>
+      <td>Other features combined</td>
+      <td>+0.0 Tonnes</td>
+    </tr>
+    <tr>
+      <td>Final prediction</td>
+      <td>4156093.0 Tonnes</td>
+    </tr>
+
+  </tbody>
+</table>
+    
+</div>
+        
+</div> 
+    
+    </div>
+  </div>
+</div>
+
+</div>
+    
+</div>
+        
+</div> 
+     
+</div>
+<div class="tab-pane" id="What if..." role="tabpanel" aria-labelledby="What if...-tab">
+ <div><div><H1>What if...</H1></div>
+<div class="row" style="margin-top: 20px;">
+    
+<div class="col-sm">
+
+<div class="card-deck">
+    
+<div class="card" >
+  <div class="card-header"><h3 class="card-title">Select Index</h3></div>
+  <div class="card-body">
+    <div class="w-100">
+    
+<div class="row" style="margin-top: 20px;">
+    
+<div class="col-sm">
+Selected index: <b>0</b>
+</div>
+        
+</div> 
+    
+    </div>
+  </div>
+</div>
+
+<div class="card" >
+  <div class="card-header"><h3 class="card-title">Prediction</h3></div>
+  <div class="card-body">
+    <div class="w-100">
+    
+<div class="row" style="margin-top: 20px;">
+    
+<div class="col-sm">
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col"></th>
+      <th scope="col">milk_consumption</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Predicted</td>
+      <td>2450779.000 Tonnes</td>
+    </tr>
+
+  </tbody>
+</table>
+    
+</div>
+        
+</div> 
+    
+    </div>
+  </div>
+</div>
+
+</div>
+    
+</div>
+        
+</div> 
+    
+<div class="row" style="margin-top: 20px;">
+    
+<div class="col-sm">
+
+<div class="card-deck">
+    
+<div class="card" >
+  <div class="card-header"><h3 class="card-title">Feature Input</h3><h6 class="card-subtitle">Adjust the feature values to change the prediction</h6></div>
+  <div class="card-body">
+    <div class="w-100">
+    
+<div class="row" style="margin-top: 20px;">
+    
+<div class="col-sm">
+<div></div>
+<div class="row" style="margin-top: 20px;">
+    
+<div class="col-sm">
+
+<div style="display:flex;flex-direction:column;">
+    <label for="soy_consumption">soy_consumption</label>
+    <input id="soy_consumption" type="text" value="0" name="soy_consumption" disabled>
+</div>
+    
+<div style="display:flex;flex-direction:column;">
+    <label for="skimmed_consumption">skimmed_consumption</label>
+    <input id="skimmed_consumption" type="text" value="1423111" name="skimmed_consumption" disabled>
+</div>
+    
+<div style="display:flex;flex-direction:column;">
+    <label for="almond_consumption">almond_consumption</label>
+    <input id="almond_consumption" type="text" value="493" name="almond_consumption" disabled>
+</div>
+    
+<div style="display:flex;flex-direction:column;">
+    <label for="hazelnut_consumption">hazelnut_consumption</label>
+    <input id="hazelnut_consumption" type="text" value="178" name="hazelnut_consumption" disabled>
+</div>
+    
+</div>
+        
+<div class="col-sm">
+
+<div style="display:flex;flex-direction:column;">
+    <label for="quinoa_consumption">quinoa_consumption</label>
+    <input id="quinoa_consumption" type="text" value="0" name="quinoa_consumption" disabled>
+</div>
+    
+<div style="display:flex;flex-direction:column;">
+    <label for="Population_Ireland">Population_Ireland</label>
+    <input id="Population_Ireland" type="text" value="2824400" name="Population_Ireland" disabled>
+</div>
+    
+<div style="display:flex;flex-direction:column;">
+    <label for="cashew_consumption">cashew_consumption</label>
+    <input id="cashew_consumption" type="text" value="0" name="cashew_consumption" disabled>
+</div>
+    
+</div>
+        
+<div class="col-sm">
+
+<div style="display:flex;flex-direction:column;">
+    <label for="milk_production">milk_production</label>
+    <input id="milk_production" type="text" value="2356000" name="milk_production" disabled>
+</div>
+    
+<div style="display:flex;flex-direction:column;">
+    <label for="oat_consumption">oat_consumption</label>
+    <input id="oat_consumption" type="text" value="2466" name="oat_consumption" disabled>
+</div>
+    
+<div style="display:flex;flex-direction:column;">
+    <label for="butter_consumption">butter_consumption</label>
+    <input id="butter_consumption" type="text" value="45942" name="butter_consumption" disabled>
+</div>
+    
+</div>
+        
+<div class="col-sm">
+
+<div style="display:flex;flex-direction:column;">
+    <label for="milk_exports">milk_exports</label>
+    <input id="milk_exports" type="text" value="281" name="milk_exports" disabled>
+</div>
+    
+<div style="display:flex;flex-direction:column;">
+    <label for="cheese_consumption">cheese_consumption</label>
+    <input id="cheese_consumption" type="text" value="3770" name="cheese_consumption" disabled>
+</div>
+    
+<div style="display:flex;flex-direction:column;">
+    <label for="milk_imports">milk_imports</label>
+    <input id="milk_imports" type="text" value="0" name="milk_imports" disabled>
+</div>
+    
+</div>
+        
+</div> 
+    
+</div>
+        
+</div> 
+    
+    </div>
+  </div>
+</div>
+
+</div>
+    
+</div>
+        
+</div> 
+    
+<div class="row" style="margin-top: 20px;">
+    
+<div class="col-sm">
+
+<div class="card-deck">
+    
+<div class="card" >
+  <div class="card-header"><h3 class="card-title">Contributions Plot</h3><h6 class="card-subtitle">How has each feature contributed to the prediction?</h6></div>
+  <div class="card-body">
+    <div class="w-100">
+    
+<div class="row" style="margin-top: 20px;">
+    
+<div class="col-sm">
+<div>                        <script type="text/javascript">window.PlotlyConfig = {MathJaxConfig: 'local'};</script>
+        <script src="https://cdn.plot.ly/plotly-2.11.1.min.js"></script>                <div id="7b2ee602-8326-4f93-90b8-6a86462b6768" class="plotly-graph-div" style="height:600px; width:100%;"></div>            <script type="text/javascript">                                    window.PLOTLYENV=window.PLOTLYENV || {};                                    if (document.getElementById("7b2ee602-8326-4f93-90b8-6a86462b6768")) {                    Plotly.newPlot(                        "7b2ee602-8326-4f93-90b8-6a86462b6768",                        [{"hoverinfo":"skip","marker":{"color":"rgba(1,1,1, 0.0)"},"name":"","x":["Population<br>average","soy_consumption","quinoa_consumption","milk_production","milk_exports","skimmed_consumption","Population_Ireland","oat_consumption","cheese_consumption","almond_consumption","cashew_consumption","butter_consumption","milk_imports","hazelnut_consumption","Other features combined","Final Prediction"],"y":[0.0,5130367.02,3327105.84,3204163.24,2920030.05,2746911.32,2458417.68,2439343.45,2453381.25,2447760.75,2444790.19,2448197.11,2450527.55,2450779.0,2450779.0,0.0],"type":"bar"},{"hoverinfo":"text","marker":{"color":["rgba(230, 230, 30, 1.0)","rgba(219, 64, 82, 0.7)","rgba(219, 64, 82, 0.7)","rgba(219, 64, 82, 0.7)","rgba(219, 64, 82, 0.7)","rgba(219, 64, 82, 0.7)","rgba(219, 64, 82, 0.7)","rgba(50, 200, 50, 1.0)","rgba(219, 64, 82, 0.7)","rgba(219, 64, 82, 0.7)","rgba(50, 200, 50, 1.0)","rgba(50, 200, 50, 1.0)","rgba(50, 200, 50, 1.0)","rgba(219, 64, 82, 0.7)","rgba(219, 64, 82, 0.7)","rgba(55, 128, 191, 0.7)"],"line":{"color":["rgba(190, 190, 30, 1.0)","rgba(219, 64, 82, 1.0)","rgba(219, 64, 82, 1.0)","rgba(219, 64, 82, 1.0)","rgba(219, 64, 82, 1.0)","rgba(219, 64, 82, 1.0)","rgba(219, 64, 82, 1.0)","rgba(40, 160, 50, 1.0)","rgba(219, 64, 82, 1.0)","rgba(219, 64, 82, 1.0)","rgba(40, 160, 50, 1.0)","rgba(40, 160, 50, 1.0)","rgba(40, 160, 50, 1.0)","rgba(219, 64, 82, 1.0)","rgba(219, 64, 82, 1.0)","rgba(55, 128, 191, 1.0)"],"width":2}},"name":"contribution","text":["Population<br>average=<BR>+5130367.02 Tonnes","soy_consumption=0<BR>-1803261.19 Tonnes","quinoa_consumption=0<BR>-122942.6 Tonnes","milk_production=2356000<BR>-284133.18 Tonnes","milk_exports=281<BR>-173118.74 Tonnes","skimmed_consumption=1423111<BR>-288493.64 Tonnes","Population_Ireland=2824400<BR>-19074.22 Tonnes","oat_consumption=2466<BR>+14037.8 Tonnes","cheese_consumption=3770<BR>-5620.5 Tonnes","almond_consumption=493<BR>-2970.56 Tonnes","cashew_consumption=0<BR>+3406.92 Tonnes","butter_consumption=45942<BR>+2330.45 Tonnes","milk_imports=0<BR>+251.45 Tonnes","hazelnut_consumption=178<BR>0.0 Tonnes","Other features combined=<BR>0.0 Tonnes","Final Prediction=<BR>+2450779.0 Tonnes"],"x":["Population<br>average","soy_consumption","quinoa_consumption","milk_production","milk_exports","skimmed_consumption","Population_Ireland","oat_consumption","cheese_consumption","almond_consumption","cashew_consumption","butter_consumption","milk_imports","hazelnut_consumption","Other features combined","Final Prediction"],"y":[5130367.02,-1803261.19,-122942.6,-284133.18,-173118.74,-288493.64,-19074.22,14037.8,-5620.5,-2970.56,3406.92,2330.45,251.45,0.0,0.0,2450779.0],"type":"bar"}],                        {"barmode":"stack","height":600,"plot_bgcolor":"#fff","showlegend":false,"title":{"text":"Contribution to prediction milk_consumption = 2450779.0 Tonnes","x":0.5},"template":{"data":{"scatter":[{"type":"scatter"}]}},"margin":{"b":138,"l":40,"pad":4,"r":40,"t":40},"yaxis":{"title":{"text":"Predicted Tonnes"}}},                        {"responsive": true}                    )                };                            </script>        </div>
+</div>
+        
+</div> 
+    
+    </div>
+  </div>
+</div>
+
+<div class="card" >
+  <div class="card-header"><h3 class="card-title">Partial Dependence Plot</h3></div>
+  <div class="card-body">
+    <div class="w-100">
+    
+<div class="row" style="margin-top: 20px;">
+    
+<div class="col-sm">
+<div>                        <script type="text/javascript">window.PlotlyConfig = {MathJaxConfig: 'local'};</script>
+        <script src="https://cdn.plot.ly/plotly-2.11.1.min.js"></script>                <div id="bfb87edf-a4ed-45bd-be6c-4c0021839d13" class="plotly-graph-div" style="height:100%; width:100%;"></div>            <script type="text/javascript">                                    window.PLOTLYENV=window.PLOTLYENV || {};                                    if (document.getElementById("bfb87edf-a4ed-45bd-be6c-4c0021839d13")) {                    Plotly.newPlot(                        "bfb87edf-a4ed-45bd-be6c-4c0021839d13",                        [{"line":{"color":"grey","width":4},"mode":"lines+markers","name":"average prediction <br>for different values of <br>soy_consumption","x":[0.0,9.777777777777777,421.6666666666665,1136.888888888889,8781.77777777778,17727.333333333318,25790.666666666664,30976.666666666664,51741.0],"y":[3481817.72,3481817.72,3481817.72,5194805.83,5194805.83,5194805.83,5194805.83,5194805.83,5194805.83],"type":"scatter"},{"line":{"color":"blue","width":4},"mode":"lines+markers","name":"prediction for index 0 <br>for different values of <br>soy_consumption","x":[0.0,9.777777777777777,421.6666666666665,1136.888888888889,8781.77777777778,17727.333333333318,25790.666666666664,30976.666666666664,51741.0],"y":[2450779.0,2450779.0,2450779.0,4780256.0,4780256.0,4780256.0,4780256.0,4780256.0,4780256.0],"type":"scatter"},{"hoverinfo":"skip","line":{"color":"grey"},"mode":"lines","opacity":0.1,"showlegend":false,"x":[0.0,9.777777777777777,421.6666666666665,1136.888888888889,8781.77777777778,17727.333333333318,25790.666666666664,30976.666666666664,51741.0],"y":[4156093.0,4156093.0,4156093.0,4674420.0,4674420.0,4674420.0,4674420.0,4674420.0,4674420.0],"type":"scatter"},{"hoverinfo":"skip","line":{"color":"grey"},"mode":"lines","opacity":0.1,"showlegend":false,"x":[0.0,9.777777777777777,421.6666666666665,1136.888888888889,8781.77777777778,17727.333333333318,25790.666666666664,30976.666666666664,51741.0],"y":[3160392.0,3160392.0,3160392.0,4707897.0,4707897.0,4707897.0,4707897.0,4707897.0,4707897.0],"type":"scatter"},{"hoverinfo":"skip","line":{"color":"grey"},"mode":"lines","opacity":0.1,"showlegend":false,"x":[0.0,9.777777777777777,421.6666666666665,1136.888888888889,8781.77777777778,17727.333333333318,25790.666666666664,30976.666666666664,51741.0],"y":[4156093.0,4156093.0,4156093.0,5198836.0,5198836.0,5198836.0,5198836.0,5198836.0,5198836.0],"type":"scatter"},{"hoverinfo":"skip","line":{"color":"grey"},"mode":"lines","opacity":0.1,"showlegend":false,"x":[0.0,9.777777777777777,421.6666666666665,1136.888888888889,8781.77777777778,17727.333333333318,25790.666666666664,30976.666666666664,51741.0],"y":[2450779.0,2450779.0,2450779.0,4780256.0,4780256.0,4780256.0,4780256.0,4780256.0,4780256.0],"type":"scatter"},{"hoverinfo":"skip","line":{"color":"grey"},"mode":"lines","opacity":0.1,"showlegend":false,"x":[0.0,9.777777777777777,421.6666666666665,1136.888888888889,8781.77777777778,17727.333333333318,25790.666666666664,30976.666666666664,51741.0],"y":[3075268.0,3075268.0,3075268.0,4674420.0,4674420.0,4674420.0,4674420.0,4674420.0,4674420.0],"type":"scatter"},{"hoverinfo":"skip","line":{"color":"grey"},"mode":"lines","opacity":0.1,"showlegend":false,"x":[0.0,9.777777777777777,421.6666666666665,1136.888888888889,8781.77777777778,17727.333333333318,25790.666666666664,30976.666666666664,51741.0],"y":[4156093.0,4156093.0,4156093.0,5324485.0,5324485.0,5324485.0,5324485.0,5324485.0,5324485.0],"type":"scatter"},{"hoverinfo":"skip","line":{"color":"grey"},"mode":"lines","opacity":0.1,"showlegend":false,"x":[0.0,9.777777777777777,421.6666666666665,1136.888888888889,8781.77777777778,17727.333333333318,25790.666666666664,30976.666666666664,51741.0],"y":[2461079.0,2461079.0,2461079.0,5224871.0,5224871.0,5224871.0,5224871.0,5224871.0,5224871.0],"type":"scatter"},{"hoverinfo":"skip","line":{"color":"grey"},"mode":"lines","opacity":0.1,"showlegend":false,"x":[0.0,9.777777777777777,421.6666666666665,1136.888888888889,8781.77777777778,17727.333333333318,25790.666666666664,30976.666666666664,51741.0],"y":[4156093.0,4156093.0,4156093.0,5711799.0,5711799.0,5711799.0,5711799.0,5711799.0,5711799.0],"type":"scatter"},{"hoverinfo":"skip","line":{"color":"grey"},"mode":"lines","opacity":0.1,"showlegend":false,"x":[0.0,9.777777777777777,421.6666666666665,1136.888888888889,8781.77777777778,17727.333333333318,25790.666666666664,30976.666666666664,51741.0],"y":[4156093.0,4156093.0,4156093.0,5272697.0,5272697.0,5272697.0,5272697.0,5272697.0,5272697.0],"type":"scatter"},{"hoverinfo":"skip","line":{"color":"grey"},"mode":"lines","opacity":0.1,"showlegend":false,"x":[0.0,9.777777777777777,421.6666666666665,1136.888888888889,8781.77777777778,17727.333333333318,25790.666666666664,30976.666666666664,51741.0],"y":[2461079.0,2461079.0,2461079.0,4780256.0,4780256.0,4780256.0,4780256.0,4780256.0,4780256.0],"type":"scatter"},{"hoverinfo":"skip","line":{"color":"grey"},"mode":"lines","opacity":0.1,"showlegend":false,"x":[0.0,9.777777777777777,421.6666666666665,1136.888888888889,8781.77777777778,17727.333333333318,25790.666666666664,30976.666666666664,51741.0],"y":[3587035.0,3587035.0,3587035.0,4780256.0,4780256.0,4780256.0,4780256.0,4780256.0,4780256.0],"type":"scatter"},{"hoverinfo":"skip","line":{"color":"grey"},"mode":"lines","opacity":0.1,"showlegend":false,"x":[0.0,9.777777777777777,421.6666666666665,1136.888888888889,8781.77777777778,17727.333333333318,25790.666666666664,30976.666666666664,51741.0],"y":[4156093.0,4156093.0,4156093.0,5321891.0,5321891.0,5321891.0,5321891.0,5321891.0,5321891.0],"type":"scatter"},{"hoverinfo":"skip","line":{"color":"grey"},"mode":"lines","opacity":0.1,"showlegend":false,"x":[0.0,9.777777777777777,421.6666666666665,1136.888888888889,8781.77777777778,17727.333333333318,25790.666666666664,30976.666666666664,51741.0],"y":[4156093.0,4156093.0,4156093.0,8137615.0,8137615.0,8137615.0,8137615.0,8137615.0,8137615.0],"type":"scatter"},{"hoverinfo":"skip","line":{"color":"grey"},"mode":"lines","opacity":0.1,"showlegend":false,"x":[0.0,9.777777777777777,421.6666666666665,1136.888888888889,8781.77777777778,17727.333333333318,25790.666666666664,30976.666666666664,51741.0],"y":[3160392.0,3160392.0,3160392.0,4707897.0,4707897.0,4707897.0,4707897.0,4707897.0,4707897.0],"type":"scatter"},{"hoverinfo":"skip","line":{"color":"grey"},"mode":"lines","opacity":0.1,"showlegend":false,"x":[0.0,9.777777777777777,421.6666666666665,1136.888888888889,8781.77777777778,17727.333333333318,25790.666666666664,30976.666666666664,51741.0],"y":[2461079.0,2461079.0,2461079.0,4780256.0,4780256.0,4780256.0,4780256.0,4780256.0,4780256.0],"type":"scatter"},{"hoverinfo":"skip","line":{"color":"grey"},"mode":"lines","opacity":0.1,"showlegend":false,"x":[0.0,9.777777777777777,421.6666666666665,1136.888888888889,8781.77777777778,17727.333333333318,25790.666666666664,30976.666666666664,51741.0],"y":[4156093.0,4156093.0,4156093.0,5323912.0,5323912.0,5323912.0,5323912.0,5323912.0,5323912.0],"type":"scatter"},{"hoverinfo":"skip","line":{"color":"grey"},"mode":"lines","opacity":0.1,"showlegend":false,"x":[0.0,9.777777777777777,421.6666666666665,1136.888888888889,8781.77777777778,17727.333333333318,25790.666666666664,30976.666666666664,51741.0],"y":[4156093.0,4156093.0,4156093.0,5324485.0,5324485.0,5324485.0,5324485.0,5324485.0,5324485.0],"type":"scatter"},{"hoverinfo":"skip","line":{"color":"grey"},"mode":"lines","opacity":0.1,"showlegend":false,"x":[0.0,9.777777777777777,421.6666666666665,1136.888888888889,8781.77777777778,17727.333333333318,25790.666666666664,30976.666666666664,51741.0],"y":[2450779.0,2450779.0,2450779.0,4780256.0,4780256.0,4780256.0,4780256.0,4780256.0,4780256.0],"type":"scatter"}],                        {"plot_bgcolor":"#fff","title":{"text":"pdp plot for soy_consumption"},"xaxis":{"title":{"text":"soy_consumption"}},"yaxis":{"title":{"text":"Predicted milk_consumption (Tonnes)"}},"template":{"data":{"scatter":[{"type":"scatter"}]}},"annotations":[{"text":"baseline value = 0","x":0,"y":2450779.0},{"text":"baseline pred = 2450779.00","x":8781.77777777778,"y":2450779.0}],"shapes":[{"line":{"color":"MediumPurple","dash":"dot","width":4},"type":"line","x0":0,"x1":0,"xref":"x","y0":2450779.0,"y1":8137615.0,"yref":"y"},{"line":{"color":"MediumPurple","dash":"dot","width":4},"type":"line","x0":0.0,"x1":51741.0,"xref":"x","y0":2450779.0,"y1":2450779.0,"yref":"y"}],"showlegend":false,"margin":{"t":40,"b":40,"l":40,"r":40}},                        {"responsive": true}                    )                };                            </script>        </div>
+</div>
+        
+</div> 
+    
+    </div>
+  </div>
+</div>
+
+</div>
+    
+</div>
+        
+</div> 
+    
+<div class="row" style="margin-top: 20px;">
+    
+<div class="col-sm">
+
+<div class="card-deck">
+    
+<div class="card" >
+  <div class="card-header"><h3 class="card-title">Contributions Table</h3><h6 class="card-subtitle">How has each feature contributed to the prediction?</h6></div>
+  <div class="card-body">
+    <div class="w-100">
+    
+<div class="row" style="margin-top: 20px;">
+    
+<div class="col-sm">
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Reason</th>
+      <th scope="col">Effect</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Average of population</td>
+      <td>5130367.02 Tonnes</td>
+    </tr>
+    <tr>
+      <td>soy_consumption = 0</td>
+      <td>-1803261.19 Tonnes</td>
+    </tr>
+    <tr>
+      <td>quinoa_consumption = 0</td>
+      <td>-122942.6 Tonnes</td>
+    </tr>
+    <tr>
+      <td>milk_production = 2356000</td>
+      <td>-284133.18 Tonnes</td>
+    </tr>
+    <tr>
+      <td>milk_exports = 281</td>
+      <td>-173118.74 Tonnes</td>
+    </tr>
+    <tr>
+      <td>skimmed_consumption = 1423111</td>
+      <td>-288493.64 Tonnes</td>
+    </tr>
+    <tr>
+      <td>Population_Ireland = 2824400</td>
+      <td>-19074.22 Tonnes</td>
+    </tr>
+    <tr>
+      <td>oat_consumption = 2466</td>
+      <td>+14037.8 Tonnes</td>
+    </tr>
+    <tr>
+      <td>cheese_consumption = 3770</td>
+      <td>-5620.5 Tonnes</td>
+    </tr>
+    <tr>
+      <td>almond_consumption = 493</td>
+      <td>-2970.56 Tonnes</td>
+    </tr>
+    <tr>
+      <td>cashew_consumption = 0</td>
+      <td>+3406.92 Tonnes</td>
+    </tr>
+    <tr>
+      <td>butter_consumption = 45942</td>
+      <td>+2330.45 Tonnes</td>
+    </tr>
+    <tr>
+      <td>milk_imports = 0</td>
+      <td>+251.45 Tonnes</td>
+    </tr>
+    <tr>
+      <td>hazelnut_consumption = 178</td>
+      <td>+0.0 Tonnes</td>
+    </tr>
+    <tr>
+      <td>Other features combined</td>
+      <td>+0.0 Tonnes</td>
+    </tr>
+    <tr>
+      <td>Final prediction</td>
+      <td>2450779.0 Tonnes</td>
+    </tr>
+
+  </tbody>
+</table>
+    
+</div>
+        
+</div> 
+    
+    </div>
+  </div>
+</div>
+
+</div>
+    
+</div>
+        
+</div> 
+    </div> 
+</div>
+<div class="tab-pane" id="Feature Dependence" role="tabpanel" aria-labelledby="Feature Dependence-tab">
+ <div><H1>Feature Dependence</H1></div>
+<div class="row" style="margin-top: 20px;">
+    
+<div class="col-sm">
+
+<div class="card-deck">
+    
+<div class="card" >
+  <div class="card-header"><h3 class="card-title">Shap Summary</h3><h6 class="card-subtitle">Ordering features by shap value</h6></div>
+  <div class="card-body">
+    <div class="w-100">
+    
+<div class="row" style="margin-top: 20px;">
+    
+<div class="col-sm">
+<div>                        <script type="text/javascript">window.PlotlyConfig = {MathJaxConfig: 'local'};</script>
+        <script src="https://cdn.plot.ly/plotly-2.11.1.min.js"></script>                <div id="5f37b5e9-a1d2-4800-9ec5-c8e1b27a25ed" class="plotly-graph-div" style="height:460px; width:100%;"></div>            <script type="text/javascript">                                    window.PLOTLYENV=window.PLOTLYENV || {};                                    if (document.getElementById("5f37b5e9-a1d2-4800-9ec5-c8e1b27a25ed")) {                    Plotly.newPlot(                        "5f37b5e9-a1d2-4800-9ec5-c8e1b27a25ed",                        [{"hoverinfo":"text","orientation":"h","text":["Hazelnuts shelled consumption in tonnes","Whole cow milk imports in tonnes","Butter consumption in tonnes","Cashews shelled consumption in tonnes","Almonds shelled consumption in tonnes","Cheese consumption in tonnes","Oats, rolled consumption in tonnes","","Skimmed cow milk cosumption in tonnes","Whole cow milk exports in tonnes","Whole cow milk production in tonnes","Quinoa consumption in tonnes","Soy consumption in tonnes"],"x":[0.0,595.2581063367967,3525.9290114544365,4803.164924792491,6602.8846919211755,13789.289568059192,18658.731545781946,38003.39392792616,73395.89356123935,126064.71627256773,167423.51268276182,294350.9016512498,881494.1292524968],"y":["13. hazelnut_consumption","12. milk_imports","11. butter_consumption","10. cashew_consumption","9. almond_consumption","8. cheese_consumption","7. oat_consumption","6. Population_Ireland","5. skimmed_consumption","4. milk_exports","3. milk_production","2. quinoa_consumption","1. soy_consumption"],"type":"bar"}],                        {"plot_bgcolor":"#fff","showlegend":false,"title":{"text":"Average impact on predicted milk_consumption<br>(mean absolute SHAP value)"},"template":{"data":{"scatter":[{"type":"scatter"}]}},"yaxis":{"automargin":true},"xaxis":{"automargin":true,"title":{"text":"Tonnes"}},"height":460,"margin":{"b":40,"l":140,"pad":4,"r":40,"t":40}},                        {"responsive": true}                    )                };                            </script>        </div>
+</div>
+        
+</div> 
+    
+    </div>
+  </div>
+</div>
+
+<div class="card" >
+  <div class="card-header"><h3 class="card-title">Shap Dependence</h3><h6 class="card-subtitle">Relationship between feature value and SHAP value</h6></div>
+  <div class="card-body">
+    <div class="w-100">
+    
+<div class="row" style="margin-top: 20px;">
+    
+<div class="col-sm">
+<div>                        <script type="text/javascript">window.PlotlyConfig = {MathJaxConfig: 'local'};</script>
+        <script src="https://cdn.plot.ly/plotly-2.11.1.min.js"></script>                <div id="5ccf151c-a189-4c3c-84b9-440f0f9abcf3" class="plotly-graph-div" style="height:100%; width:100%;"></div>            <script type="text/javascript">                                    window.PLOTLYENV=window.PLOTLYENV || {};                                    if (document.getElementById("5ccf151c-a189-4c3c-84b9-440f0f9abcf3")) {                    Plotly.newPlot(                        "5ccf151c-a189-4c3c-84b9-440f0f9abcf3",                        [{"hoverinfo":"text","marker":{"color":[2356000,2716600,5346800,3340000,5224390,5816220,7831250,5621000,5089960,3475500,5327000,2548300,5256300,5326100,3145000,4697000,2951400,2637800],"colorbar":{"title":{"text":"milk_production"}},"colorscale":[[0.0,"rgb(0,0,255)"],[1.0,"rgb(255,0,0)"]],"opacity":0.6,"showscale":true,"size":7},"mode":"markers","text":["None=0<br>soy_consumption=0.0<br>milk_production=2356000<br>SHAP=-1803261.188","None=5<br>soy_consumption=0.0<br>milk_production=2716600<br>SHAP=-1803272.834","None=34<br>soy_consumption=15909.0<br>milk_production=5346800<br>SHAP=386919.131","None=13<br>soy_consumption=357.0<br>milk_production=3340000<br>SHAP=-1563861.905","None=45<br>soy_consumption=51741.0<br>milk_production=5224390<br>SHAP=383462.105","None=53<br>soy_consumption=11994.0<br>milk_production=5816220<br>SHAP=422335.755","None=57<br>soy_consumption=29902.0<br>milk_production=7831250<br>SHAP=701411.427","None=25<br>soy_consumption=6212.0<br>milk_production=5621000<br>SHAP=425042.256","None=47<br>soy_consumption=30030.0<br>milk_production=5089960<br>SHAP=372258.484","None=12<br>soy_consumption=454.0<br>milk_production=3475500<br>SHAP=-1379188.439","None=49<br>soy_consumption=24616.0<br>milk_production=5327000<br>SHAP=379304.077","None=3<br>soy_consumption=0.0<br>milk_production=2548300<br>SHAP=-1811754.664","None=36<br>soy_consumption=38550.0<br>milk_production=5256300<br>SHAP=386425.675","None=31<br>soy_consumption=21364.0<br>milk_production=5326100<br>SHAP=386465.247","None=8<br>soy_consumption=1108.0<br>milk_production=3145000<br>SHAP=434974.801","None=17<br>soy_consumption=12.0<br>milk_production=4697000<br>SHAP=-1120453.678","None=6<br>soy_consumption=2.0<br>milk_production=2951400<br>SHAP=-1546406.619","None=4<br>soy_consumption=1160.0<br>milk_production=2637800<br>SHAP=560096.039"],"x":[0.0,0.0,15909.0,357.0,51741.0,11994.0,29902.0,6212.0,30030.0,454.0,24616.0,0.0,38550.0,21364.0,1108.0,12.0,2.0,1160.0],"y":[-1803261.1883811173,-1803272.8338990645,386919.1311766045,-1563861.9053147307,383462.10517519916,422335.7553793303,701411.4274601459,425042.2559668513,372258.4844489125,-1379188.4386239133,379304.07734850835,-1811754.6640706994,386425.6747100789,386465.2471136054,434974.8013786239,-1120453.677969267,-1546406.618658388,560096.039469902],"type":"scattergl"}],                        {"hovermode":"closest","paper_bgcolor":"#fff","plot_bgcolor":"#fff","showlegend":false,"title":{"text":"Dependence plot for soy_consumption"},"xaxis":{"title":{"text":"soy_consumption"}},"yaxis":{"title":{"text":"SHAP value (Tonnes)"}},"template":{"data":{"scatter":[{"type":"scatter"}]}},"margin":{"t":40,"b":40,"l":40,"r":40}},                        {"responsive": true}                    )                };                            </script>        </div>
+</div>
+        
+</div> 
+    
+    </div>
+  </div>
+</div>
+
+</div>
+    
+</div>
+        
+</div> 
+     
+</div>
+<div class="tab-pane" id="Feature Interactions" role="tabpanel" aria-labelledby="Feature Interactions-tab">
+ <div><H1>Feature Interactions</H1></div>
+<div class="row" style="margin-top: 20px;">
+    
+<div class="col-sm">
+
+<div class="card-deck">
+    
+<div class="card" >
+  <div class="card-header"><h3 class="card-title">Interactions Summary</h3><h6 class="card-subtitle">Ordering features by shap interaction value</h6></div>
+  <div class="card-body">
+    <div class="w-100">
+    
+<div class="row" style="margin-top: 20px;">
+    
+<div class="col-sm">
+<div>                        <script type="text/javascript">window.PlotlyConfig = {MathJaxConfig: 'local'};</script>
+        <script src="https://cdn.plot.ly/plotly-2.11.1.min.js"></script>                <div id="3ecda7c3-a439-4ca6-a8b3-030d6649f440" class="plotly-graph-div" style="height:460px; width:100%;"></div>            <script type="text/javascript">                                    window.PLOTLYENV=window.PLOTLYENV || {};                                    if (document.getElementById("3ecda7c3-a439-4ca6-a8b3-030d6649f440")) {                    Plotly.newPlot(                        "3ecda7c3-a439-4ca6-a8b3-030d6649f440",                        [{"hoverinfo":"text","orientation":"h","x":[0.0,130.69103328798266,1172.6830380858748,1506.86465651858,2375.252539358744,6482.110872729093,7335.343793415364,9462.542833208303,47871.039158199106,76603.35839499826,79052.60316997844,102248.73287259018,1042292.976597047],"y":["13. hazelnut_consumption","12. milk_imports","11. butter_consumption","10. cashew_consumption","9. almond_consumption","8. oat_consumption","7. cheese_consumption","6. Population_Ireland","5. skimmed_consumption","4. milk_exports","3. quinoa_consumption","2. milk_production","1. soy_consumption"],"type":"bar"}],                        {"plot_bgcolor":"#fff","showlegend":false,"title":{"text":"Average interaction shap values for soy_consumption"},"template":{"data":{"scatter":[{"type":"scatter"}]}},"yaxis":{"automargin":true},"xaxis":{"automargin":true,"title":{"text":"Tonnes"}},"height":460,"margin":{"b":40,"l":140,"pad":4,"r":40,"t":40}},                        {"responsive": true}                    )                };                            </script>        </div>
+</div>
+        
+</div> 
+    
+    </div>
+  </div>
+</div>
+
+<div class="card" >
+  <div class="card-header"><h3 class="card-title">Interaction Dependence</h3><h6 class="card-subtitle">Relation between feature value and shap interaction value</h6></div>
+  <div class="card-body">
+    <div class="w-100">
+    
+<div class="row" style="margin-top: 20px;">
+    
+<div class="col-sm">
+<div>                        <script type="text/javascript">window.PlotlyConfig = {MathJaxConfig: 'local'};</script>
+        <script src="https://cdn.plot.ly/plotly-2.11.1.min.js"></script>                <div id="0a33c289-9404-4f47-9ce0-e60ff42e8e3e" class="plotly-graph-div" style="height:100%; width:100%;"></div>            <script type="text/javascript">                                    window.PLOTLYENV=window.PLOTLYENV || {};                                    if (document.getElementById("0a33c289-9404-4f47-9ce0-e60ff42e8e3e")) {                    Plotly.newPlot(                        "0a33c289-9404-4f47-9ce0-e60ff42e8e3e",                        [{"hoverinfo":"text","marker":{"color":[0.0,0.0,15909.0,357.0,51741.0,11994.0,29902.0,6212.0,30030.0,454.0,24616.0,0.0,38550.0,21364.0,1108.0,12.0,2.0,1160.0],"colorbar":{"title":{"text":"soy_consumption"}},"colorscale":[[0.0,"rgb(0,0,255)"],[1.0,"rgb(255,0,0)"]],"opacity":0.6,"showscale":true,"size":7},"mode":"markers","text":["None=0<br>milk_production=2356000<br>soy_consumption=0.0<br>SHAP=-123398.867","None=5<br>milk_production=2716600<br>soy_consumption=0.0<br>SHAP=-120530.857","None=34<br>milk_production=5346800<br>soy_consumption=15909.0<br>SHAP=-102122.280","None=13<br>milk_production=3340000<br>soy_consumption=357.0<br>SHAP=-83748.806","None=45<br>milk_production=5224390<br>soy_consumption=51741.0<br>SHAP=-97128.786","None=53<br>milk_production=5816220<br>soy_consumption=11994.0<br>SHAP=-59654.594","None=57<br>milk_production=7831250<br>soy_consumption=29902.0<br>SHAP=-73857.581","None=25<br>milk_production=5621000<br>soy_consumption=6212.0<br>SHAP=-64766.985","None=47<br>milk_production=5089960<br>soy_consumption=30030.0<br>SHAP=-105717.844","None=12<br>milk_production=3475500<br>soy_consumption=454.0<br>SHAP=105170.680","None=49<br>milk_production=5327000<br>soy_consumption=24616.0<br>SHAP=-98577.056","None=3<br>milk_production=2548300<br>soy_consumption=0.0<br>SHAP=-122809.997","None=36<br>milk_production=5256300<br>soy_consumption=38550.0<br>SHAP=-101852.345","None=31<br>milk_production=5326100<br>soy_consumption=21364.0<br>SHAP=-104085.152","None=8<br>milk_production=3145000<br>soy_consumption=1108.0<br>SHAP=21813.739","None=17<br>milk_production=4697000<br>soy_consumption=12.0<br>SHAP=353209.382","None=6<br>milk_production=2951400<br>soy_consumption=2.0<br>SHAP=-77666.989","None=4<br>milk_production=2637800<br>soy_consumption=1160.0<br>SHAP=24365.250"],"x":[2356000,2716600,5346800,3340000,5224390,5816220,7831250,5621000,5089960,3475500,5327000,2548300,5256300,5326100,3145000,4697000,2951400,2637800],"y":[-123398.86732744658,-120530.8573521272,-102122.28019909392,-83748.80550672766,-97128.786277726,-59654.59365556267,-73857.58071060607,-64766.98516371084,-105717.84435246704,105170.6803583838,-98577.05603509996,-122809.99737019406,-101852.34475941508,-104085.15236820542,21813.738938067574,353209.38242074643,-77666.98924011283,24365.249670930963],"type":"scattergl"}],                        {"hovermode":"closest","paper_bgcolor":"#fff","plot_bgcolor":"#fff","showlegend":false,"title":{"text":"Interaction plot for milk_production and soy_consumption"},"xaxis":{"title":{"text":"milk_production"}},"yaxis":{"title":{"text":"SHAP value (Tonnes)"}},"template":{"data":{"scatter":[{"type":"scatter"}]}},"margin":{"t":40,"b":40,"l":40,"r":40}},                        {"responsive": true}                    )                };                            </script>        </div><div>                        <script type="text/javascript">window.PlotlyConfig = {MathJaxConfig: 'local'};</script>
+        <script src="https://cdn.plot.ly/plotly-2.11.1.min.js"></script>                <div id="3bf9b8bf-ce98-461b-90fc-f1ae5c4fe3de" class="plotly-graph-div" style="height:100%; width:100%;"></div>            <script type="text/javascript">                                    window.PLOTLYENV=window.PLOTLYENV || {};                                    if (document.getElementById("3bf9b8bf-ce98-461b-90fc-f1ae5c4fe3de")) {                    Plotly.newPlot(                        "3bf9b8bf-ce98-461b-90fc-f1ae5c4fe3de",                        [{"hoverinfo":"text","marker":{"color":[2356000,2716600,5346800,3340000,5224390,5816220,7831250,5621000,5089960,3475500,5327000,2548300,5256300,5326100,3145000,4697000,2951400,2637800],"colorbar":{"title":{"text":"milk_production"}},"colorscale":[[0.0,"rgb(0,0,255)"],[1.0,"rgb(255,0,0)"]],"opacity":0.6,"showscale":true,"size":7},"mode":"markers","text":["None=0<br>soy_consumption=0.0<br>milk_production=2356000<br>SHAP=-123398.867","None=5<br>soy_consumption=0.0<br>milk_production=2716600<br>SHAP=-120530.857","None=34<br>soy_consumption=15909.0<br>milk_production=5346800<br>SHAP=-102122.280","None=13<br>soy_consumption=357.0<br>milk_production=3340000<br>SHAP=-83748.806","None=45<br>soy_consumption=51741.0<br>milk_production=5224390<br>SHAP=-97128.786","None=53<br>soy_consumption=11994.0<br>milk_production=5816220<br>SHAP=-59654.594","None=57<br>soy_consumption=29902.0<br>milk_production=7831250<br>SHAP=-73857.581","None=25<br>soy_consumption=6212.0<br>milk_production=5621000<br>SHAP=-64766.985","None=47<br>soy_consumption=30030.0<br>milk_production=5089960<br>SHAP=-105717.844","None=12<br>soy_consumption=454.0<br>milk_production=3475500<br>SHAP=105170.680","None=49<br>soy_consumption=24616.0<br>milk_production=5327000<br>SHAP=-98577.056","None=3<br>soy_consumption=0.0<br>milk_production=2548300<br>SHAP=-122809.997","None=36<br>soy_consumption=38550.0<br>milk_production=5256300<br>SHAP=-101852.345","None=31<br>soy_consumption=21364.0<br>milk_production=5326100<br>SHAP=-104085.152","None=8<br>soy_consumption=1108.0<br>milk_production=3145000<br>SHAP=21813.739","None=17<br>soy_consumption=12.0<br>milk_production=4697000<br>SHAP=353209.382","None=6<br>soy_consumption=2.0<br>milk_production=2951400<br>SHAP=-77666.989","None=4<br>soy_consumption=1160.0<br>milk_production=2637800<br>SHAP=24365.250"],"x":[0.0,0.0,15909.0,357.0,51741.0,11994.0,29902.0,6212.0,30030.0,454.0,24616.0,0.0,38550.0,21364.0,1108.0,12.0,2.0,1160.0],"y":[-123398.86732744671,-120530.85735212722,-102122.28019909374,-83748.80550672789,-97128.78627772573,-59654.59365556236,-73857.58071060572,-64766.98516371033,-105717.84435246687,105170.68035838423,-98577.05603509975,-122809.99737019413,-101852.34475941471,-104085.15236820548,21813.73893806734,353209.3824207467,-77666.98924011295,24365.249670931298],"type":"scattergl"}],                        {"hovermode":"closest","paper_bgcolor":"#fff","plot_bgcolor":"#fff","showlegend":false,"title":{"text":"Interaction plot for soy_consumption and milk_production"},"xaxis":{"title":{"text":"soy_consumption"}},"yaxis":{"title":{"text":"SHAP value (Tonnes)"}},"template":{"data":{"scatter":[{"type":"scatter"}]}},"margin":{"t":40,"b":40,"l":40,"r":40}},                        {"responsive": true}                    )                };                            </script>        </div>
+</div>
+        
+</div> 
+    
+    </div>
+  </div>
+</div>
+
+</div>
+    
+</div>
+        
+</div> 
+     
+</div>
+
+</div>
+<script type="text/javascript">
+
+$('#myTab a').on('click', function (e) {
+  e.preventDefault()
+  $(this).tab('show')
+})
+
+$('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
+    window.dispatchEvent(new Event('resize'));
+})
+
+</script>
+
+</div>
+
+</body>
+
+<script type="text/javascript">
+window.dispatchEvent(new Event('resize'));
+</script>
+        
+</html>
+    
